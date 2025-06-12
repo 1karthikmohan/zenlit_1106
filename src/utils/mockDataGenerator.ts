@@ -4,10 +4,11 @@ import {
   maleFirstNames,
   femaleFirstNames,
   lastNames,
-  bios,
+  maleBios,
+  femaleBios,
   interests,
   postCaptions
-} from './mockData/constants';
+} from '../data/mockData';
 
 function generateUser(gender: 'male' | 'female', index: number): User {
   const id = nanoid();
@@ -27,8 +28,8 @@ function generateUser(gender: 'male' | 'female', index: number): User {
     name,
     dpUrl: `https://i.pravatar.cc/300?img=${index}${gender === 'male' ? 'm' : 'f'}`,
     bio: gender === 'male' 
-      ? bios.male[index % bios.male.length]
-      : bios.female[index % bios.female.length],
+      ? maleBios[index % maleBios.length]
+      : femaleBios[index % femaleBios.length],
     gender,
     age: Math.floor(Math.random() * (45 - 18) + 18),
     distance: Math.floor(Math.random() * 250),
