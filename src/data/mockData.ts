@@ -2,22 +2,22 @@ import { User, Post, CurrentUser, Message } from '../types';
 import { generateId } from '../utils/generateId';
 
 // Arrays of sample data to generate users and posts
-const maleFirstNames = [
+export const maleFirstNames = [
   'John', 'Mike', 'David', 'Alex', 'Chris', 'Daniel', 'James', 'Matthew', 'Andrew', 'Ryan',
   'William', 'Thomas', 'Michael', 'Robert', 'Richard', 'Joseph', 'Charles', 'Kevin', 'Brian', 'Steven'
 ];
 
-const femaleFirstNames = [
+export const femaleFirstNames = [
   'Jane', 'Sarah', 'Emily', 'Katie', 'Emma', 'Olivia', 'Sophia', 'Isabella', 'Mia', 'Charlotte',
   'Ava', 'Amelia', 'Harper', 'Evelyn', 'Abigail', 'Elizabeth', 'Sofia', 'Victoria', 'Grace', 'Lily'
 ];
 
-const lastNames = [
+export const lastNames = [
   'Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Garcia', 'Miller', 'Davis', 'Rodriguez', 'Martinez',
   'Anderson', 'Taylor', 'Thomas', 'Moore', 'Jackson', 'Martin', 'Lee', 'Thompson', 'White', 'Harris'
 ];
 
-const maleBios = [
+export const maleBios = [
   'Tech enthusiast & software developer 💻',
   'Adventure seeker | Mountain climber 🏔️',
   'Professional photographer 📸',
@@ -30,7 +30,7 @@ const maleBios = [
   'Gamer & streamer 🎮 | Tech reviewer 📱'
 ];
 
-const femaleBios = [
+export const femaleBios = [
   'Digital artist & illustrator 🎨',
   'Yoga instructor & wellness coach 🧘‍♀️',
   'Fashion blogger | Style consultant 👗',
@@ -43,7 +43,7 @@ const femaleBios = [
   'Tech entrepreneur & public speaker 🎤'
 ];
 
-const interests = [
+export const interests = [
   'Photography', 'Travel', 'Fitness', 'Music', 'Art', 'Technology', 'Food', 'Fashion',
   'Sports', 'Reading', 'Gaming', 'Movies', 'Dancing', 'Hiking', 'Cooking', 'Yoga',
   'Writing', 'Pets', 'Nature', 'Coffee'
@@ -91,7 +91,7 @@ export const mockFemaleUsers: User[] = Array.from({ length: 500 }, (_, i) =>
 );
 
 // Generate posts
-const postCaptions = [
+export const postCaptions = [
   'Living my best life! 🌟',
   'Another beautiful day in paradise 🌅',
   'Can\'t beat this view 😍',
