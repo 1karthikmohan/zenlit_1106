@@ -1,5 +1,5 @@
 import { nanoid } from 'nanoid';
-import { User, Post, Story } from '../types';
+import { User, Post } from '../types';
 import {
   maleFirstNames,
   femaleFirstNames,
@@ -8,15 +8,6 @@ import {
   interests,
   postCaptions
 } from './mockData/constants';
-
-function generateStories(userId: string): Story[] {
-  return Array.from({ length: 3 }, () => ({
-    id: nanoid(),
-    mediaUrl: `https://picsum.photos/800/1200?random=${nanoid()}`,
-    caption: 'Story moment ✨',
-    timestamp: new Date().toISOString()
-  }));
-}
 
 function generateUser(gender: 'male' | 'female', index: number): User {
   const id = nanoid();
@@ -46,8 +37,7 @@ function generateUser(gender: 'male' | 'female', index: number): User {
       Twitter: `https://twitter.com/${username}`,
       Instagram: `https://instagram.com/${username}`,
       LinkedIn: `https://linkedin.com/in/${username}`,
-    },
-    stories: generateStories(id)
+    }
   };
 }
 
